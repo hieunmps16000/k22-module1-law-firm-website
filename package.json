@@ -1,0 +1,21 @@
+{
+    "name": "k22-module1-law-firm-website",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "deploy": "vite preview && gh-pages -d dist"
+    },
+    "devDependencies": {
+        "vite": "^8.2.2"
+    },
+    "dependencies": {
+        "@tailwindcss/vite": "^4.3.3",
+        "gh-pages": "^6.3.0",
+        "tailwindcss": "^4.3.3",
+        "vite-plugin-ejs": "^2.0.0"
+    }
+}

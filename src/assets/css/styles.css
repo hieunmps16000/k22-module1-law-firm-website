@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@custom-variant xl (@media (max-width: 1199.98px));
+@custom-variant lg (@media (max-width: 991.98px));
+@custom-variant md (@media (max-width: 767.98px));
+@custom-variant sm (@media (max-width: 575.98px));
+
+@theme {
+    --font-heading: "Roboto Slab", serif;
+    --font-base: "Manrope", sans-serif;
+
+    --color-body: #0e1412;
+    --color-primary: #fd6038;
+    --filter-primary-color: brightness(0) saturate(100%) invert(53%) sepia(55%) saturate(4213%) hue-rotate(338deg)
+        brightness(101%) contrast(98%);
+}
+
+@utility navbar__link {
+    @apply flex items-center p-[1rem_2rem] text-body leading-[1.75] hover:text-primary;
+
+    &:hover .navbar__arrow {
+        @apply -rotate-180 filter-[var(--filter-primary-color)];
+    }
+}
+
+@utility navbar__link--active {
+    @apply font-[600] text-primary;
+}
+
+@utility navbar__arrow {
+    @apply ml-[0.5rem] transition-[rotate] duration-200;
+}
