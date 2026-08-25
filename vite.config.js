@@ -4,6 +4,7 @@ import path from "path";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
+    base: process.env.NODE_ENV === "production" ? "/k22-module1-law-firm-website" : "/",
     root: "src",
     publicDir: "../public",
     build: {

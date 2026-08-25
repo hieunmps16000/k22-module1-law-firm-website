@@ -27,3 +27,8 @@ button {
     user-select: none;
     color: inherit;
 }
+
+img {
+    display: block;
+    max-width: 100%;
+}

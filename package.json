@@ -7,7 +7,7 @@
         "dev": "vite",
         "build": "vite build",
         "preview": "vite preview",
-        "deploy": "vite preview && gh-pages -d dist"
+        "deploy": "vite build && gh-pages -d dist"
     },
     "devDependencies": {
         "vite": "^8.2.2"
