@@ -1,15 +1,134 @@
-<header class="p-[2rem] text-[2.4rem] font-[800] text-center bg-[#f4f4f4]">
-    <div class="container">
-        <div class="flex items-center justify-between">
-            <a href="./" class="text-[2.4rem] font-[800] text-[#000] uppercase">Logo</a>
-            <nav>
-                <ul class="flex items-center gap-[3rem]">
-                    <li><a href="./">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
+<header class="sticky -top-[1rem] left-0 z-1 w-full pt-[3rem] pb-[2rem] bg-[#fff] lg:pt-[3rem]">
+    <div class="container gx-md-0">
+        <div class="flex items-center md:justify-between">
+            <!-- Menu mobile -->
+            <button
+                class="flex items-center justify-center size-[4.6rem] lg:hidden js-toggle"
+                toggle-target="#navbar"
+                aria-label="Open menu"
+            >
+                <img src="./icons/menu.svg" alt="" />
+            </button>
+
+            <!-- Logo -->
+            <a href="./" class="hidden md:block shrink-0]">
+                <img class="" src="./icons/logo.svg" alt="Justice Law Firm" />
+            </a>
+
+            <!-- Navbar -->
+            <nav id="navbar" class="navbar hide">
+                <div
+                    class="flex items-center justify-between p-[2rem_0_2rem_2rem] border-b border-solid border-[#e0e0e0] lg:p-0 lg:border-none"
+                >
+                    <a href="./" class="shrink-0] lg:hidden">
+                        <img class="w-[6rem]" src="./icons/logo.svg" alt="Justice Law Firm" />
+                    </a>
+
+                    <button
+                        class="flex items-center justify-center pr-[1rem] size-[4.6rem] opacity-50 lg:hidden js-toggle"
+                        toggle-target="#navbar"
+                        aria-label="Close menu"
+                    >
+                        <img class="size-[2.4rem]" src="./icons/close.svg" alt="" />
+                    </button>
+                </div>
+                <ul class="flex flex-col mt-[1rem] lg:items-center js-navbar-list lg:flex-row">
+                    <li class="navbar__item"><a href="#!" class="navbar__link navbar__link--active">Home</a></li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link">
+                            About
+                            <img class="navbar__arrow" src="./icons/arrow-down.svg" alt="" />
+                        </a>
+                        <ul class="sub-menu">
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link">
+                                    About 2
+                                    <img class="navbar__arrow" src="./icons/arrow-down.svg" alt="" />
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="navbar__item">
+                                        <a href="#!" class="navbar__link"> About 2-1 </a>
+                                    </li>
+                                    <li class="navbar__item">
+                                        <a href="#!" class="navbar__link"> About 2-2 </a>
+                                    </li>
+                                    <li class="navbar__item">
+                                        <a href="#!" class="navbar__link"> About 2-3 </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> About 3 </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> About 4 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link"
+                            >Practice Areas <img class="navbar__arrow" src="./icons/arrow-down.svg" alt=""
+                        /></a>
+                        <ul class="sub-menu">
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> Practice Areas 2 </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> Practice Areas 3 </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> Practice Areas 4 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link"
+                            >Attorneys <img class="navbar__arrow" src="./icons/arrow-down.svg" alt=""
+                        /></a>
+                        <ul class="sub-menu">
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> Attorneys 2 </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> Attorneys 3 </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> Attorneys 4 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#!" class="navbar__link"
+                            >Page <img class="navbar__arrow" src="./icons/arrow-down.svg" alt=""
+                        /></a>
+                        <ul class="sub-menu">
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> Page 2 </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> Page 3 </a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#!" class="navbar__link"> Page 4 </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
+            <div class="navbar__overlay js-toggle" toggle-target="#navbar"></div>
+
+            <!-- Header act -->
+            <a
+                class="flex items-center gap-[0.4rem] ml-auto text-body text-[1rem] leading-[1.6] group md:ml-0 md:text-[1.6rem] lg:ml-[3rem] xl:ml-[7.2rem]"
+                href="tel:(000) 123 456 789"
+            >
+                Call :
+                <span
+                    class="font-[700] text-[1.2rem] leading-[1.59] transtion-[color] duration-200 group-hover:text-primary lg:text-[2.2rem] lg:leading-[1.45]"
+                >
+                    (000)123456789
+                </span>
+            </a>
         </div>
     </div>
 </header>

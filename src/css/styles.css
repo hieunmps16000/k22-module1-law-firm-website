@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-@custom-variant xl (@media (max-width: 1199.98px));
-@custom-variant lg (@media (max-width: 991.98px));
-@custom-variant md (@media (max-width: 767.98px));
-@custom-variant sm (@media (max-width: 575.98px));
-
 @theme {
     --font-heading: "Roboto Slab", serif;
     --font-base: "Manrope", sans-serif;
@@ -13,20 +8,79 @@
     --color-primary: #fd6038;
     --filter-primary-color: brightness(0) saturate(100%) invert(53%) sepia(55%) saturate(4213%) hue-rotate(338deg)
         brightness(101%) contrast(98%);
+    --border-color: #e0e0e0;
 }
 
-@utility navbar__link {
-    @apply flex items-center p-[1rem_2rem] text-body leading-[1.75] hover:text-primary;
-
-    &:hover .navbar__arrow {
-        @apply -rotate-180 filter-[var(--filter-primary-color)];
+@layer base {
+    body {
+        font-family: var(--font-base);
     }
 }
 
-@utility navbar__link--active {
-    @apply font-[600] text-primary;
+@utility navbar {
+    @apply fixed inset-0 z-2 ml-auto -translate-x-full bg-[#fff] shadow-[0_0_1.4rem_0_rgba(0,0,0,0.05)] opacity-0 transition-[translate,opacity] duration-300 md:inset-[0_50%_0_0] overflow-y-auto overscroll-contain [&.navbar--active]:translate-x-0 [&.navbar--active]:opacity-100 lg:static lg:translate-0 lg:shadow-none lg:opacity-100 lg:overflow-visible;
+
+    &.navbar--active > .sub-menu {
+        @apply block;
+    }
+
+    &.navbar--active ~ .navbar__overlay {
+        @apply opacity-100 visible;
+    }
+}
+
+@utility navbar__item {
+    @apply relative;
+
+    &:hover > .sub-menu {
+        @apply lg:opacity-100 lg:visible lg:-translate-x-[0];
+    }
+
+    &:hover > .navbar__link {
+        @apply text-primary;
+    }
+
+    &:hover > .navbar__link > .navbar__arrow {
+        @apply lg:-rotate-90 lg:filter-[var(--filter-primary-color)];
+    }
+
+    &.navbar__item--active > .navbar__link > .navbar__arrow {
+        @apply -rotate-180 filter-[var(--filter-primary-color)];
+    }
+
+    &.navbar__item--active > .sub-menu {
+        @apply h-auto opacity-100;
+    }
+}
+
+@utility navbar__link {
+    @apply flex items-center p-[1rem_2rem] text-body leading-[1.75] hover:text-primary select-none;
+
+    &.navbar__link--active {
+        @apply font-[600] text-primary;
+    }
 }
 
 @utility navbar__arrow {
-    @apply ml-[0.5rem] transition-[rotate] duration-200;
+    @apply ml-auto transition-[rotate] duration-200 lg:ml-[0.5rem];
+}
+
+@utility sub-menu {
+    @apply h-0 opacity-0 pl-[2rem] transition-[height,opacity,translate] duration-300 lg:absolute lg:top-full lg:left-0 lg:-translate-x-[1rem] lg:pl-0 lg:min-w-[20rem] lg:h-auto lg:shadow-[0_0_1.4rem_0_rgba(0,0,0,0.04)] lg:invisible;
+
+    .navbar__link {
+        @apply lg:py-[0.6rem] lg:text-[1.4rem];
+    }
+
+    .navbar__arrow {
+        @apply lg:ml-auto;
+    }
+
+    .sub-menu {
+        @apply lg:top-0 lg:left-full;
+    }
+}
+
+@utility navbar__overlay {
+    @apply fixed inset-[0] z-1 opacity-0 invisible bg-[rgba(0,0,0,0.5)] transition-[opacity,visibility] duration-300;
 }
