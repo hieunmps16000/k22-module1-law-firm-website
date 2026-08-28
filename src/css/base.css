@@ -13,21 +13,6 @@ body {
     line-height: 1.5;
 }
 
-button,
-input,
-textarea,
-section {
-    font-family: inherit;
-    font-size: inherit;
-}
-
-button {
-    border: none;
-    outline: none;
-    user-select: none;
-    color: inherit;
-}
-
 img {
     display: block;
     max-width: 100%;
