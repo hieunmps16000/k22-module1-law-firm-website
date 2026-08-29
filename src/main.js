@@ -1,14 +1,6 @@
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
-/**
- * JS toggle
- *
- * Cách dùng:
- * <button class="js-toggle" toggle-target="#box">Click</button>
- * <div id="box">Content show/hide</div>
- */
-
 function initJsToggle() {
     $$(".js-toggle").forEach((button) => {
         const target = button.getAttribute("toggle-target");
