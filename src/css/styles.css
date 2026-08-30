@@ -110,7 +110,7 @@
 }
 
 @utility dots {
-    @apply flex items-center justify-center gap-[4.3rem];
+    @apply flex items-center justify-center gap-[3rem];
 }
 
 @utility dot {
