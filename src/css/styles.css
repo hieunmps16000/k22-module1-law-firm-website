@@ -97,10 +97,14 @@
     }
 }
 
+@utility heading-wrapper {
+    @apply flex flex-col items-center;
+}
+
 @utility section-sub-heading {
     @apply mb-[0.6rem] font-heading text-[1rem] leading-[1.7rem] text-center md:text-[1.8rem] md:leading-[3rem];
 }
 
 @utility section-heading {
-    @apply text-[2.4rem] font-heading font-[700] leading-[3rem] text-center md:text-[4.2rem] md:leading-[5.2rem];
+    @apply text-[2.4rem] font-heading font-[700] leading-[3rem] text-center md:text-[4.2rem] md:leading-[5.2rem] xl:max-w-[77rem];
 }
