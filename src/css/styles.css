@@ -114,8 +114,9 @@
 }
 
 @utility dot {
-    @apply size-[1.3rem] rounded-full bg-[#E0E0E0] cursor-pointer;
+    @apply size-[1.3rem] rounded-full bg-[#E0E0E0] cursor-pointer transition-[background-color] duration-300;
 
+    &:hover,
     &.dot--active {
         @apply bg-[#EB5757];
     }
