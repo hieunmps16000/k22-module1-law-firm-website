@@ -102,9 +102,21 @@
 }
 
 @utility section-sub-heading {
-    @apply mb-[0.6rem] font-heading text-[1rem] leading-[1.7rem] text-center md:text-[1.8rem] md:leading-[3rem];
+    @apply mb-[0.6rem] font-heading text-[1rem] leading-[1.7rem] text-center text-primary md:text-[1.8rem] md:leading-[3rem];
 }
 
 @utility section-heading {
     @apply text-[2.4rem] font-heading font-[700] leading-[3rem] text-center md:text-[4.2rem] md:leading-[5.2rem] xl:max-w-[77rem];
+}
+
+@utility dots {
+    @apply flex items-center justify-center gap-[4.3rem];
+}
+
+@utility dot {
+    @apply size-[1.3rem] rounded-full bg-[#E0E0E0] cursor-pointer;
+
+    &.dot--active {
+        @apply bg-[#EB5757];
+    }
 }
