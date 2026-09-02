@@ -15,6 +15,11 @@
     body {
         font-family: var(--font-base);
     }
+
+    input,
+    textarea {
+        @apply block font-[inherit] text-body outline-none;
+    }
 }
 
 @utility navbar {
