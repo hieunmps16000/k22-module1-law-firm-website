@@ -23,7 +23,7 @@
 }
 
 @utility navbar {
-    @apply fixed inset-0 z-2 ml-auto -translate-x-full bg-[#fff] shadow-[0_0_1.4rem_0_rgba(0,0,0,0.05)] opacity-0 transition-[translate,opacity] duration-300 md:inset-[0_50%_0_0] overflow-y-auto overscroll-contain [&.navbar--active]:translate-x-0 [&.navbar--active]:opacity-100 lg:static lg:translate-0 lg:shadow-none lg:opacity-100 lg:overflow-visible;
+    @apply fixed inset-0 z-2 ml-auto -translate-x-full bg-[#fff] shadow-[0_0_1.4rem_0_rgba(0,0,0,0.05)] opacity-0 transition-[translate,opacity] duration-300 md:inset-[0_50%_0_0] overflow-y-auto overscroll-contain [&.navbar--active]:translate-x-0 [&.navbar--active]:opacity-100 lg:static lg:translate-0 lg:shadow-none lg:opacity-100 lg:overflow-visible lg:bg-transparent;
 
     &.navbar--active > .sub-menu {
         @apply block;
