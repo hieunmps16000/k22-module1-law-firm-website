@@ -16,6 +16,12 @@
         @apply font-base text-body;
     }
 
+    body {
+        &.home-page .header {
+            @apply !bg-white;
+        }
+    }
+
     input,
     textarea {
         @apply block font-[inherit] text-body outline-none;
