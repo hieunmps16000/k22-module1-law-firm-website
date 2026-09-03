@@ -16,6 +16,7 @@ export default defineConfig({
                 about: path.resolve(import.meta.dirname, "src/about.html"),
                 blog: path.resolve(import.meta.dirname, "src/blog.html"),
                 contact: path.resolve(import.meta.dirname, "src/contact.html"),
+                practice: path.resolve(import.meta.dirname, "src/practice.html"),
             },
         },
     },

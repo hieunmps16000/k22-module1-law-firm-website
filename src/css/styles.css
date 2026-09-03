@@ -13,7 +13,7 @@
 
 @layer base {
     body {
-        font-family: var(--font-base);
+        @apply font-base text-body;
     }
 
     input,
