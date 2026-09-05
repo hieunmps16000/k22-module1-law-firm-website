@@ -6,9 +6,14 @@
 
     --color-body: #0e1412;
     --color-primary: #fd6038;
+    --light-primary-color: #ffefe5;
+    --light-dark: #586863;
     --filter-primary-color: brightness(0) saturate(100%) invert(53%) sepia(55%) saturate(4213%) hue-rotate(338deg)
         brightness(101%) contrast(98%);
     --border-color: #e0e0e0;
+    --header-bg: #f8ebc9;
+    --navbar-bg: #fff;
+    --navbar-shadow: rgba(0, 0, 0, 0.05);
 }
 
 @layer base {
@@ -29,7 +34,7 @@
 }
 
 @utility navbar {
-    @apply fixed inset-0 z-2 ml-auto -translate-x-full bg-[#fff] shadow-[0_0_1.4rem_0_rgba(0,0,0,0.05)] opacity-0 transition-[translate,opacity] duration-300 md:inset-[0_50%_0_0] overflow-y-auto overscroll-contain [&.navbar--active]:translate-x-0 [&.navbar--active]:opacity-100 lg:static lg:translate-0 lg:shadow-none lg:opacity-100 lg:overflow-visible lg:bg-transparent;
+    @apply fixed inset-0 z-2 ml-auto -translate-x-full bg-[var(--navbar-bg)] shadow-[0_0_1.4rem_0_var(--navbar-shadow)] opacity-0 transition-[translate,opacity] duration-300 md:inset-[0_50%_0_0] overflow-y-auto overscroll-contain [&.navbar--active]:translate-x-0 [&.navbar--active]:opacity-100 lg:static lg:translate-0 lg:shadow-none lg:opacity-100 lg:overflow-visible lg:bg-transparent;
 
     &.navbar--active > .sub-menu {
         @apply block;
@@ -77,7 +82,7 @@
 }
 
 @utility sub-menu {
-    @apply h-0 pl-[2rem] bg-[#fff] opacity-0 transition-[height,opacity,translate] duration-300 lg:absolute lg:top-full lg:left-0 lg:-translate-x-[1rem] lg:pl-0 lg:min-w-[20rem] lg:h-auto lg:shadow-[0_0_1.4rem_0_rgba(0,0,0,0.04)] lg:invisible;
+    @apply h-0 pl-[2rem] bg-white opacity-0 transition-[height,opacity,translate] duration-300 lg:absolute lg:top-full lg:left-0 lg:-translate-x-[1rem] lg:pl-0 lg:min-w-[20rem] lg:h-auto lg:shadow-[0_0_1.4rem_0_rgba(0,0,0,0.04)] lg:invisible;
 
     .navbar__link {
         @apply lg:py-[0.6rem] lg:text-[1.4rem];
@@ -104,7 +109,7 @@
     }
 
     &.btn--primary {
-        @apply text-[#fff] bg-[var(--color-primary)];
+        @apply text-white bg-[var(--color-primary)];
     }
 }
 

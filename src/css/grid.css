@@ -12,6 +12,7 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    overflow: hidden;
 }
 
 .container {
@@ -234,6 +235,7 @@
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
+        overflow: initial;
     }
     .row-cols-md-1 > * {
         flex: 0 0 auto;
