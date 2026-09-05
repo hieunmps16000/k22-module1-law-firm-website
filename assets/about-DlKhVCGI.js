@@ -1,0 +1,1 @@
+import{n as e,t}from"./aos-CX39Fm2v.js";e(t(),1).default.init({duration:1e3});
